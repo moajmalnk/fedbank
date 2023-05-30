@@ -1,0 +1,206 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <title>fedbank</title>
+  </head>
+  <style>
+    :root {
+  --color-primary: #0073ff;
+  --color-white: #e9e9e9;
+  --color-black: #141d28;
+  --color-black-1: #212b38;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: goldman;
+
+}
+
+.logo {
+  color: var(--color-white);
+  font-size: 30px;
+}
+
+<!--.logo span {-->
+<!--  color: var(&#45;&#45;color-yellow);-->
+<!--}-->
+
+.menu-bar {
+  background-color: #00008B;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+
+  position: relative;
+}
+
+.menu-bar ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu-bar ul li {
+  /* width: 120px; */
+  padding: 2px 30px;
+  /* text-align: center; */
+
+  position: relative;
+}
+
+.menu-bar ul li a {
+  font-size: 15px;
+  color: var(--color-white);
+  text-decoration: none;
+
+  transition: all 0.3s;
+}
+
+.menu-bar ul li a:hover {
+  color: var(--color-primary);
+}
+
+.fas {
+  float: right;
+  margin-left: 10px;
+  padding-top: 3px;
+}
+
+/* dropdown menu style */
+.dropdown-menu {
+  display: none;
+}
+
+.menu-bar ul li:hover .dropdown-menu {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #00008B;
+}
+
+.menu-bar ul li:hover .dropdown-menu ul {
+  display: block;
+  margin: 10px;
+}
+
+.menu-bar ul li:hover .dropdown-menu ul li {
+  width: 158px;
+  padding: 10px;
+}
+
+.dropdown-menu-1 {
+  display: none;
+}
+
+.dropdown-menu ul li:hover .dropdown-menu-1 {
+  display: block;
+  position: absolute;
+  left: 150px;
+  top: 0;
+  background-color: #00008B;
+}
+
+
+
+
+  </style>
+  <body>
+    <div class="menu-bar">
+      <a href="{% url 'home' %}"><h1 class="logo">FED<span>BANK.</span></h1></a>
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'apply' %}">Apply</a></li>
+        <li><a href="#">Branch <i class="fas fa-caret-down"></i></a>
+
+            <div class="dropdown-menu">
+                <ul>
+                  <li>
+                    <a href="https://en.wikipedia.org/wiki/Malappuram">MALAPPURAM <i class="fas fa-caret-right"></i></a>
+
+                    <div class="dropdown-menu-1">
+                      <ul>
+                        <li><a href="#">MANJERI</a></li>
+                        <li><a href="#">MAKKARAPARAMBA</a></li>
+                        <li><a href="#">MANKADA</a></li>
+                        <li><a href="#">KONDOTTY</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="https://en.wikipedia.org/wiki/Kozhikode">KOZHIKODE <i class="fas fa-caret-right"></i></a>
+
+                    <div class="dropdown-menu-1">
+                      <ul>
+                        <li><a href="#">FEROKE</a></li>
+                        <li><a href="#">MUKKAM</a></li>
+                        <li><a href="#">THALASSERY</a></li>
+                        <li><a href="#">NADAPURAm</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="https://en.wikipedia.org/wiki/Thrissur">THRISSUR <i class="fas fa-caret-right"></i></a>
+                    
+                    <div class="dropdown-menu-1">
+                      <ul>
+                        <li><a href="#">ATHIRAPPALLY</a></li>
+                        <li><a href="#">THIRUVAMBADI</a></li>
+                        <li><a href="#">PUNNATHUR KOTTA</a></li>
+                        <li><a href="#">CHAVAKKAD</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="https://en.wikipedia.org/wiki/Ernakulam">ERNAKULAM <i class="fas fa-caret-right"></i></a>
+
+                    <div class="dropdown-menu-1">
+                      <ul>
+                        <li><a href="#">ALUVA</a></li>
+                        <li><a href="#">EDAPPALLY</a></li>
+                        <li><a href="#">PALARIVETTAM</a></li>
+                        <li><a href="#">FORT KOCHI</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="https://en.wikipedia.org/wiki/Thiruvananthapuram">TRIVANDRUM <i class="fas fa-caret-right"></i></a>
+
+                    <div class="dropdown-menu-1">
+                      <ul>
+                        <li><a href="#">PAALA</a></li>
+                        <li><a href="#">KOOVALAM</a></li>
+                        <li><a href="#">ATTUKAL</a></li>
+                        <li><a href="#">POOVAR</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+        </li>
+        <li><a href="{% url 'login' %}">Login</a>
+        </li>
+        <li><a href="{% url 'register' %}">Register</a></li>
+      </ul>
+    </div>
+
+    <h1 style="font-size: 72px; width:17px; margin:180; color: #00008B;">
+      <span style="font-size: 32px; width:1700px; margin:600; color: #8B8000;">APPLY&nbsp;FOR&nbsp;ACCOUNT</span>
+      <a href="{% url 'apply' %}" class="btn btn-outline-success" style="width: 25px; font-size: 15px; margin:750;">APPLY&nbsp;HERE</a>
+
+      FEDERAL BANK
+      <span style="font-size: 32px; width:1700px; margin:0; color: #8B8000;">Personal&nbsp;Banking&nbsp;Services</span>
+
+    </h1>
+  </body>
+</html>
